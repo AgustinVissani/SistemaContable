@@ -1,0 +1,17 @@
+CREATE TABLE users(
+ 	id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+    name VARCHAR(191) NOT NULL,
+    id_rol INTEGER UNSIGNED NOT NULL,
+    email VARCHAR(191) UNIQUE NOT NULL,
+    email_verified_at DATETIME,
+    password VARCHAR(191) NOT NULL,
+    remember_token VARCHAR(100),
+ 	created_at DATETIME,
+    updated_at DATETIME,
+
+ 	PRIMARY KEY (id),
+
+    FOREIGN KEY (id_rol) REFERENCES roles(id)
+	ON UPDATE CASCADE ON DELETE RESTRICT
+
+) ENGINE=InnoDB;

@@ -1,0 +1,32 @@
+/* HOVER DE BOTONES NAVBAR */
+
+[data-title]:hover:after {
+    opacity: 1;
+    transition: all 0.1s ease 0.5s;
+    visibility: visible;
+}
+
+[data-title]:after {
+    content: attr(data-title);
+    background-color: rgb(255, 255, 255);
+    color: rgb(253, 0, 0);
+    font-size: 14px;
+    position: absolute;
+    padding: 2px 8px;
+    bottom: -1.6em;
+    right: 100%;
+    white-space: nowrap;
+    opacity: 0;
+    border: 1px solid #d4d3d3;
+    z-index: 99999;
+    visibility: hidden;
+    border-radius: 6px;
+}
+
+[data-title] {
+    position: relative;
+}
+
+a {
+    font-size: small;
+}

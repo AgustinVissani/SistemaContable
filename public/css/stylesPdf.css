@@ -1,0 +1,20 @@
+                    .h1tablaCliente {
+                        color: rgb(19, 142, 212);
+                        font-family: 'Catamaran', sans-serif;
+                    }
+                    
+                    .tdNombre {
+                        font-family: 'Catamaran', sans-serif;
+                        text-align: left;
+                    }
+                    
+                    .hr {
+                        page-break-after: always;
+                        border: 0;
+                        margin: 0;
+                        padding: 0;
+                    }
+                    
+                    .thpdf {
+                        color: aqua;
+                    }

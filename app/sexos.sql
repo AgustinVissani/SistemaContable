@@ -1,0 +1,9 @@
+CREATE TABLE sexos(
+ 	id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+    tipo VARCHAR(60) UNIQUE NOT NULL,
+ 	created_at DATETIME,
+    updated_at DATETIME,
+
+ 	PRIMARY KEY (id)
+
+) ENGINE=InnoDB;

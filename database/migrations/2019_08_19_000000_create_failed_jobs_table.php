@@ -1,0 +1,45 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+use App\Models\Conexion;
+use App\Helpers\DatabaseConnection;
+
+class CreateFailedJobsTable extends Migration
+{
+
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        $conexion = Conexion::find(1);
+        DatabaseConnection::setConnection($conexion->nombre);
+
+        Schema::connection('mysql2')->create('failed_jobs', function (Blueprint $table) {
+            $table->id();
+            $table->string('uuid')->unique();
+            $table->text('connection');
+            $table->text('queue');
+            $table->longText('payload');
+            $table->longText('exception');
+            $table->timestamp('failed_at')->useCurrent();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        $conexion = Conexion::find(1);
+        DatabaseConnection::setConnection($conexion->nombre);
+
+        Schema::connection('mysql2')->dropIfExists('failed_jobs');
+    }
+}

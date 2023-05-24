@@ -1,0 +1,9 @@
+CREATE TABLE provincias(
+ 	id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+    descripcion VARCHAR(60) UNIQUE NOT NULL,
+ 	created_at DATETIME,
+    updated_at DATETIME,
+
+ 	PRIMARY KEY (id)
+
+) ENGINE=InnoDB;

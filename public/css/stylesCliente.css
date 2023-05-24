@@ -1,0 +1,16 @@
+.tdFijoID {
+    font-family: 'Catamaran', sans-serif;
+    border: solid 1px;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+}
+
+.botonPDF {
+    float: right;
+    margin: 1px;
+}
+
+.botonLink {
+    position: static;
+    float: right;
+}

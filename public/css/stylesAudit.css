@@ -1,0 +1,12 @@
+.tablaAudit {
+    max-height: 600px;
+    max-width: 1500px;
+}
+
+.table td {
+    /* border: 1px solid #000; */
+    text-align: left;
+    padding: 5px;
+    /* Alto de las celdas */
+    height: 0px;
+}
